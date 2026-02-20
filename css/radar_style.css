@@ -1,0 +1,95 @@
+/* --- PRECISION RADAR SCAN --- */
+.radar-overlay {
+    z-index: 20;
+    /* Above atmosphere */
+    pointer-events: none;
+    inset: 0;
+    position: absolute;
+}
+
+/* 1. SCAN LINE */
+.radar-scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(0, 229, 255, 0.5) 50%,
+            transparent 100%);
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
+    animation: radarScan 10s infinite linear;
+    opacity: 0;
+    /* Hidden by default */
+}
+
+@keyframes radarScan {
+    0% {
+        top: -10%;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 110%;
+        opacity: 0;
+    }
+}
+
+/* 2. RETICLES (Focus Brackets) */
+.radar-reticle {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: 0.3s;
+}
+
+.radar-reticle.top-left {
+    top: 2rem;
+    left: 2rem;
+    border-right: none;
+    border-bottom: none;
+}
+
+.radar-reticle.top-right {
+    top: 2rem;
+    right: 2rem;
+    border-left: none;
+    border-bottom: none;
+}
+
+.radar-reticle.bottom-left {
+    bottom: 2rem;
+    left: 2rem;
+    border-right: none;
+    border-top: none;
+}
+
+.radar-reticle.bottom-right {
+    bottom: 2rem;
+    right: 2rem;
+    border-left: none;
+    border-top: none;
+}
+
+/* MOBILE STRICT: NO SCAN ANIMATION */
+@media (max-width: 900px) {
+    .radar-scan-line {
+        display: none !important;
+    }
+
+    .radar-reticle {
+        border-color: rgba(255, 255, 255, 0.1);
+        width: 15px;
+        height: 15px;
+    }
+}

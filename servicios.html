@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Aéreos | Luis Zeledon</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Specific Styles for Services Page can go here or in style.css -->
+    <style>
+        .page-header {
+            background-image: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.9)), url('img/hero/hero2.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION (Same as Index) -->
+    <nav class="navbar scrolled" id="navbar"> <!-- Always solid on subpages -->
+        <div class="container nav-content">
+            <div class="logo">
+                <a href="index.html"><span class="text-accent">LUIS</span> ZELEDON <i
+                        class="fas fa-plane-departure text-accent"></i></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Volver a Inicio</a></li>
+                <li><a href="dondehevolado.html">Donde He Volado</a></li>
+                <li><a href="#contacto" class="btn-nav">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER (Tactical Banner) -->
+    <header class="services-header-bg">
+        <div class="overlay"></div>
+        <div class="services-header-content">
+            <h5 class="text-accent mb-2">OPERATIONAL CAPABILITIES</h5>
+            <h1 class="text-white display-4" style="font-family: var(--font-tech);">SERVICIOS AÉREOS</h1>
+            <div style="height: 2px; width: 50px; background: var(--accent-primary); margin: 20px 0;"></div>
+            <p>Soluciones de vuelo de alta precisión y seguridad.</p>
+        </div>
+    </header>
+
+    <div class="mission-ops-container">
+
+        <!-- MISSION 01: INSTRUCTION (Training Module) -->
+        <section class="mission-section">
+            <div class="mission-bg"
+                style="background-image: url('img/servicios/instructor_de_vuelo_privado(PPL).webp');"></div>
+            <div class="mission-overlay"></div>
+
+            <div class="mission-content">
+                <div class="mission-panel">
+                    <div class="panel-header">
+                        <span class="mission-code">MODULE: TRN-01</span>
+                        <span class="mission-status">ENROLLMENT OPEN</span>
+                    </div>
+                    <h2 class="mission-title">INSTRUCCIÓN PPL</h2>
+                    <p class="mission-desc">
+                        Formación aeronáutica de élite. Programa personalizado para la obtención de la Licencia de
+                        Piloto Privado.
+                        Combina teoría avanzada con práctica intensiva bajo estándares internacionales.
+                    </p>
+
+                    <div class="mission-specs">
+                        <div class="spec-row">
+                            <span class="spec-label">AIRCRAFT</span>
+                            <span class="spec-value">CESSNA 172/152</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">DURATION</span>
+                            <span class="spec-value">4-6 MONTHS</span>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/50688888888?text=Info%20PPL" target="_blank" class="btn-mission">
+                        <i class="fab fa-whatsapp"></i> CONSULTAR
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- MISSION 02: MEDEVAC (Right Aligned) -->
+        <section class="mission-section alt">
+            <div class="mission-bg"
+                style="background-image: url('img/servicios/transporte_de_suministros_médicos.png');"></div>
+            <div class="mission-overlay"></div>
+
+            <div class="mission-content">
+                <div class="mission-panel">
+                    <div class="panel-header">
+                        <span class="mission-code">OP: MEDEVAC-RED</span>
+                        <span class="mission-status"
+                            style="color: #ff3333; background: rgba(255, 51, 51, 0.1);">EMERGENCY READY</span>
+                    </div>
+                    <h2 class="mission-title">TRANSPORTE MÉDICO</h2>
+                    <p class="mission-desc">
+                        Logística aérea crítica. Traslado rápido de pacientes, órganos y suministros médicos a zonas
+                        remotas.
+                        Capacidad de respuesta inmediata y coordinación con equipos de tierra.
+                    </p>
+
+                    <div class="mission-specs">
+                        <div class="spec-row">
+                            <span class="spec-label">RESPONSE TIME</span>
+                            <span class="spec-value">
+                                < 60 MINS</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">COVERAGE</span>
+                            <span class="spec-value">NATIONWIDE</span>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/50688888888?text=Emergencia%20Medica" target="_blank" class="btn-mission">
+                        <i class="fab fa-whatsapp"></i> CONSULTAR
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- MISSION 03: SCENIC (Left Aligned) -->
+        <section class="mission-section">
+            <div class="mission-bg" style="background-image: url('img/servicios/vuelo_turistico_y_panoramico.png');">
+            </div>
+            <div class="mission-overlay"></div>
+
+            <div class="mission-content">
+                <div class="mission-panel">
+                    <div class="panel-header">
+                        <span class="mission-code">ROUTE: SCENIC-V</span>
+                        <span class="mission-status" style="color: var(--sky-blue);">VISUAL FLIGHT</span>
+                    </div>
+                    <h2 class="mission-title">VUELOS PANORÁMICOS</h2>
+                    <p class="mission-desc">
+                        Descubre Costa Rica desde la estratosfera. Rutas sobre volcanes activos, costas vírgenes y
+                        selvas densas.
+                        La experiencia visual definitiva para fotografía y turismo VIP.
+                    </p>
+
+                    <div class="mission-specs">
+                        <div class="spec-row">
+                            <span class="spec-label">ALTITUDE</span>
+                            <span class="spec-value">1500 - 3500 FT</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">PASSENGERS</span>
+                            <span class="spec-value">1 - 3 PAX</span>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/50688888888?text=Tour%20Aereo" target="_blank" class="btn-mission">
+                        <i class="fab fa-whatsapp"></i> CONSULTAR
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- MISSION 04: EXECUTIVE (Right Aligned) -->
+        <section class="mission-section alt">
+            <div class="mission-bg" style="background-image: url('img/servicios/vuelos_privados_personalizados.png');">
+            </div>
+            <div class="mission-overlay"></div>
+
+            <div class="mission-content">
+                <div class="mission-panel">
+                    <div class="panel-header">
+                        <span class="mission-code">CLASS: EXECUTIVE</span>
+                        <span class="mission-status" style="color: var(--accent-gold);">VIP CLEARANCE</span>
+                    </div>
+                    <h2 class="mission-title">VUELOS PRIVADOS</h2>
+                    <p class="mission-desc">
+                        Eficiencia empresarial. Evita filas y esperas. Despegue directo a su destino con total
+                        privacidad y confort.
+                        Ideal para ejecutivos, inversores y transporte seguro.
+                    </p>
+
+                    <div class="mission-specs">
+                        <div class="spec-row">
+                            <span class="spec-label">CONFIDENTIALITY</span>
+                            <span class="spec-value">LEVEL 5</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">DESTINATIONS</span>
+                            <span class="spec-value">INTL / DOMESTIC</span>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/50688888888?text=Vuelo%20Privado" target="_blank" class="btn-mission">
+                        <i class="fab fa-whatsapp"></i> CONSULTAR
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- FLOATING ACTIONS -->
+    <div class="floating-actions">
+        <a href="https://wa.me/50688888888" target="_blank" class="float-btn whatsapp" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+50688888888" class="float-btn phone" aria-label="Llamar">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container text-center">
+            <p>&copy; 2026 Luis Zeledon. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+            <div class="mt-3">
+                <a href="privacidad.html" class="text-dim"
+                    style="font-size: 0.8rem; text-decoration: underline;">Política de Privacidad</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Tawk.to -->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/69633d7c987b03197cb20051/1jelqgcbd';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+
+    <script src="js/main.js"></script>
+    <!-- DEVELOPER BADGE -->
+    <a href="#" class="dev-badge">
+        <img src="img/logo.png" alt="NextWeb CR">
+        <span>Desarrollado por <strong>NextWeb CR</strong></span>
+    </a>
+
+</body>
+
+</html>

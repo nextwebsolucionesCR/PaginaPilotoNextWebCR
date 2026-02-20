@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis Zeledon | Piloto Comercial & Privado</title>
+    <meta name="description"
+        content="Portafolio profesional del piloto Luis Zeledon. Vuelos privados, comerciales, carga y ambulancia aérea. Experiencia internacional y seguridad garantizada.">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@300;400;500;700&family=Rajdhani:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- FAVICON (Placeholder) -->
+    <link rel="icon" href="img/favicon.ico">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <span class="text-accent">LUIS</span> ZELEDON <i class="fas fa-plane-departure text-accent"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#acerca">Piloto</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="dondehevolado.html">Donde He Volado</a></li>
+                <li><a href="#contacto" class="btn-nav">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FLOATING ACTIONS -->
+    <div class="floating-actions">
+        <a href="https://wa.me/50688888888" target="_blank" class="float-btn whatsapp" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+50688888888" class="float-btn phone" aria-label="Llamar">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- HERO SECTION -->
+    <!-- HERO SECTION (COCKPIT 3D PARALLAX) -->
+    <header id="hero" class="hero-section">
+        <!-- Layer 1: Background (Pilot/Plane) -->
+        <div class="hero-layer bg"></div>
+
+        <!-- Layer 2: Atmosphere/Depth -->
+        <div class="hero-layer atmosphere"></div>
+
+        <!-- Layer 2.5: Precision Radar Scan -->
+        <div class="hero-layer radar-overlay">
+            <div class="radar-scan-line"></div>
+            <div class="radar-reticle top-left"></div>
+            <div class="radar-reticle top-right"></div>
+            <div class="radar-reticle bottom-left"></div>
+            <div class="radar-reticle bottom-right"></div>
+        </div>
+
+        <!-- Layer 3: HUD Content -->
+        <div class="hero-layer hud">
+            <div class="container hero-content">
+                <h1 class="hero-title"><span class="gradient-text">PILOTO LUIS</h1>
+                <div class="hero-btns">
+                    <a href="#contacto" class="btn btn-primary">Reservar Vuelo</a>
+                    <a href="servicios.html" class="btn btn-outline">Ver Servicios</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ABOUT SECTION (EDITORIAL / MAGAZINE STYLE) -->
+    <section id="acerca" class="section-padding about-section">
+        <div class="bg-text-layer">AVIATOR</div>
+        <div class="container magazine-layout">
+            <div class="mag-visual">
+                <!-- Using one clean cutout image for drama -->
+                <img src="img/acerca/acerca1.png" alt="Luis Zeledon Pilot" class="pilot-cutout">
+            </div>
+
+            <div class="mag-content">
+                <h4 class="text-accent" style="letter-spacing: 5px;">PROFILE</h4>
+                <h2>LUIS ZELEDON</h2>
+                <h5 class="text-sky-blue mb-4">COMERCIAL / PRIVADO / RESCATE</h5>
+
+                <p>Más que un piloto, un operador aéreo integral con base en <strong>Nandayure, Costa Rica</strong>. 49
+                    años de vida dedicados a la maestría aeronáutica, desde vuelos ejecutivos de alta precisión hasta
+                    misiones humanitarias transatlánticas.</p>
+
+                <div class="tech-specs">
+                    <div class="spec-item">
+                        <span class="label">TIEMPO TOTAL</span>
+                        <span class="value text-white">12</span>
+                        <small>AÑOS</small>
+                    </div>
+                    <div class="spec-item">
+                        <span class="label">IDIOMAS</span>
+                        <span class="value text-accent">3</span>
+                        <small>ESP / ENG / POR</small>
+                    </div>
+                    <div class="spec-item">
+                        <span class="label">RANGO</span>
+                        <span class="value text-sky-blue">CPL</span>
+                        <small>COMERCIAL</small>
+                    </div>
+                </div>
+
+                <div class="licenses-list">
+                    <h5 class="mb-3 border-bottom pb-2">HABILITACIONES TÉCNICAS</h5>
+                    <ul style="display: flex; flex-wrap: wrap; gap: 15px;">
+                        <li class="badge accent">IFR INSTRUMENTAL</li>
+                        <li class="badge accent">MULTIMOTOR</li>
+                        <li class="badge accent">JET RATING</li>
+                        <li class="badge accent">ROTARY WING (HELICOPTER)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION (INTERACTIVE MANIFEST) -->
+    <section id="experiencia" class="section-padding manifest-section">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-end mb-5">
+                <div>
+                    <h4 class="text-accent">FLIGHT LOG</h4>
+                    <h2 class="text-white">AERONAVES OPERADAS</h2>
+                </div>
+                <div class="text-right desktop-only">
+                    <h3 class="text-sky-blue">20 HRS</h3>
+                    <small class="text-dim">REGISTRO DE VUELO ACTUAL</small>
+                </div>
+            </div>
+
+            <!-- DESKTOP INTERACTIVE LAYOUT -->
+            <div class="manifest-container desktop-only">
+                <!-- List Side -->
+                <div class="manifest-list">
+                    <!-- Commercial Group -->
+                    <div class="manifest-item active"
+                        data-img="img/experiencia/tipooperacion_comercial_cessna_172n_skyhawk.jpg">
+                        <div class="manifest-code">C-172N</div>
+                        <div class="manifest-name">Cessna Skyhawk</div>
+                        <div class="manifest-type">Operación Comercial</div>
+                    </div>
+                    <div class="manifest-item" data-img="img/experiencia/tipooperacion_comercial_da40_series.jpg">
+                        <div class="manifest-code">DA-40</div>
+                        <div class="manifest-name">Diamond Star</div>
+                        <div class="manifest-type">Comercial / Instrucción</div>
+                    </div>
+                    <div class="manifest-item"
+                        data-img="img/experiencia/tipooperacion_comercial_piper_pa_28_cherokee.jpg">
+                        <div class="manifest-code">PA-28</div>
+                        <div class="manifest-name">Piper Cherokee</div>
+                        <div class="manifest-type">Comercial</div>
+                    </div>
+
+                    <!-- Executive Group -->
+                    <div class="manifest-item"
+                        data-img="img/experiencia/tipooperacion_ejecutiva_beechcraft_king_air_350i.webp">
+                        <div class="manifest-code text-accent">KA-350i</div>
+                        <div class="manifest-name">King Air 350i</div>
+                        <div class="manifest-type text-accent">Ejecutivo VIP</div>
+                    </div>
+                    <div class="manifest-item"
+                        data-img="img/experiencia/tipooperacion_ejecutiva_cessna_citation_mustang.jpg">
+                        <div class="manifest-code text-accent">C-510</div>
+                        <div class="manifest-name">Citation Mustang</div>
+                        <div class="manifest-type text-accent">Light Jet</div>
+                    </div>
+                    <div class="manifest-item" data-img="img/experiencia/tipooperacion_ejecutiva_pilatus_pc12.webp">
+                        <div class="manifest-code text-accent">PC-12</div>
+                        <div class="manifest-name">Pilatus PC-12</div>
+                        <div class="manifest-type text-accent">Ejecutivo Turboprop</div>
+                    </div>
+
+                    <!-- Cargo Group -->
+                    <div class="manifest-item" data-img="img/experiencia/tipooperacioncarga_beechcraft_1900c.jpg">
+                        <div class="manifest-code">BE-1900C</div>
+                        <div class="manifest-name">Beechcraft 1900C</div>
+                        <div class="manifest-type">Carga Pesada</div>
+                    </div>
+                    <div class="manifest-item" data-img="img/experiencia/tipooperacioncarga_cessna_caravan.jpg">
+                        <div class="manifest-code">C-208</div>
+                        <div class="manifest-name">Cessna Caravan</div>
+                        <div class="manifest-type">Carga / Logística</div>
+                    </div>
+                </div>
+
+                <!-- Visual Side -->
+                <div class="manifest-visual active-view" id="manifest-visual"
+                    style="background-image: url('img/experiencia/tipooperacion_comercial_cessna_172n_skyhawk.jpg');">
+                    <div class="visual-data">
+                        <h4 class="text-accent">ESTADO OPERATIVO</h4>
+                        <p class="text-white">Capacidad multimisión confirmada.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MOBILE STACKED LAYOUT (FALLBACK P/ REGLA GLOBAL) -->
+            <div class="mobile-manifest-grid mobile-only">
+                <div class="mobile-plane-card">
+                    <img src="img/experiencia/tipooperacion_ejecutiva_beechcraft_king_air_350i.webp"
+                        class="mobile-plane-img" alt="King Air">
+                    <div class="mobile-plane-info">
+                        <h4 class="text-accent">KING AIR 350i</h4>
+                        <p class="text-dim">Ejecutivo VIP</p>
+                    </div>
+                </div>
+                <div class="mobile-plane-card">
+                    <img src="img/experiencia/tipooperacion_comercial_cessna_172n_skyhawk.jpg" class="mobile-plane-img"
+                        alt="Cessna">
+                    <div class="mobile-plane-info">
+                        <h4>CESSNA 172N</h4>
+                        <p class="text-dim">Comercial</p>
+                    </div>
+                </div>
+                <div class="mobile-plane-card">
+                    <img src="img/experiencia/tipooperacion_ejecutiva_cessna_citation_mustang.jpg"
+                        class="mobile-plane-img" alt="Citation">
+                    <div class="mobile-plane-info">
+                        <h4 class="text-accent">CITATION MUSTANG</h4>
+                        <p class="text-dim">Light Jet</p>
+                    </div>
+                </div>
+                <div class="text-center mt-3">
+                    <p class="text-dim">...y más aeronaves certificadas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACHIEVEMENTS (LOGROS) -->
+    <!-- ACHIEVEMENTS (HUD STYLE) -->
+    <section id="logros" class="hud-section section-padding">
+        <div class="container hud-container">
+            <div class="hud-grid">
+                <div class="hud-info">
+                    <h5 class="text-accent" style="letter-spacing: 5px;">MISSION STATUS: ACTIVE</h5>
+                    <h2 class="mb-4 text-white">PUENTE AÉREO <br><span class="text-accent">INTERCONTINENTAL</span></h2>
+
+                    <div class="hud-data-block mb-4">
+                        <span class="hud-label">COORDINATES</span>
+                        <div class="text-white" style="font-family: monospace;">10.96N 85.35W >> 40.41N 3.70W</div>
+                    </div>
+
+                    <p class="text-dim mb-4" style="border-left: 1px solid rgba(255,255,255,0.1); padding-left: 1rem;">
+                        Ejecución exitosa de traslado de ayuda humanitaria conectando zonas de difícil acceso en
+                        <strong>Costa Rica</strong> con destinos en <strong>Europa</strong>. Operación logística de alta
+                        complejidad.
+                    </p>
+
+                    <div class="d-flex align-items-center gap-4">
+                        <div class="text-center">
+                            <i class="fas fa-plane-departure text-accent fa-2x"></i>
+                            <small class="d-block text-dim mt-1">SJO</small>
+                        </div>
+                        <div style="flex:1; height: 1px; background: var(--accent-primary);"></div>
+                        <div class="text-center">
+                            <i class="fas fa-plane-arrival text-accent fa-2x"></i>
+                            <small class="d-block text-dim mt-1">MAD</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hud-visual desktop-only">
+                    <div class="hud-map-visual">
+                        <!-- Simulated Vector Map -->
+                        <div class="hud-line"></div>
+                        <i class="fas fa-globe-americas fa-5x text-dim" style="opacity: 0.2;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATIONS (DIGITAL SCANNER STYLE) -->
+    <section class="section-padding scanner-section">
+        <div class="container">
+            <div class="scanner-layout">
+                <!-- Visual Side -->
+                <div class="scanner-visual">
+                    <div class="scanner-frame">
+                        <div class="scan-beam"></div>
+                        <img src="img/certificacionesylicencias/certificadosylicencias.png" alt="Licencias Piloto"
+                            class="scanner-img">
+                    </div>
+                </div>
+
+                <!-- Info Side -->
+                <div class="scanner-info">
+                    <h5 class="text-accent">DIGITAL ARCHIVE: VERIFIED</h5>
+                    <h2 class="mb-5 text-white">CERTIFICACIONES <br>VIGENTES</h2>
+
+                    <div class="cert-data-list">
+                        <a href="recursos/licensia_ejemplo.pdf" target="_blank" class="cert-row">
+                            <div>
+                                <h4 class="text-white mb-0">CPL LICENSE</h4>
+                                <small class="text-dim">Commercial Pilot - Multi Engine</small>
+                            </div>
+                            <i class="fas fa-download text-accent"></i>
+                        </a>
+
+                        <a href="recursos/certificado_ejemplo.pdf" target="_blank" class="cert-row">
+                            <div>
+                                <h4 class="text-white mb-0">MEDICAL CLASS 1</h4>
+                                <small class="text-dim">Fit to Fly Status: GREEN</small>
+                            </div>
+                            <i class="fas fa-download text-accent"></i>
+                        </a>
+
+                        <div class="cert-row">
+                            <div>
+                                <h4 class="text-white mb-0">FLIGHT LOGBOOK</h4>
+                                <small class="text-dim">Official Record</small>
+                            </div>
+                            <i class="fas fa-lock text-dim"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTIONS (TEASERS) -->
+    <!-- CALL TO ACTIONS (BOARDING PASS STYLE) -->
+    <section class="boarding-pass-grid container">
+        <!-- Service Pass -->
+        <div class="boarding-pass">
+            <div class="pass-header">
+                <span class="text-accent">BOARDING PASS</span>
+                <span class="text-white">SRV-001</span>
+            </div>
+            <h3 class="text-white mb-2">SERVICIOS AÉREOS</h3>
+            <p class="text-dim mb-4">Instrucción, traslados médicos y vuelos privados a medida.</p>
+            <div class="pass-code">||| |||| || |||</div>
+            <a href="servicios.html" class="btn btn-outline btn-block mt-3">VER SERVICIOS</a>
+        </div>
+
+        <!-- Logbook Pass -->
+        <div class="boarding-pass">
+            <div class="pass-header">
+                <span class="text-accent">FLIGHT MAP</span>
+                <span class="text-white">DST-002</span>
+            </div>
+            <h3 class="text-white mb-2">BITÁCORA DE VIAJE</h3>
+            <p class="text-dim mb-4">Explora los destinos, rutas y aeropuertos operados.</p>
+            <div class="pass-code">|| ||||| ||| ||</div>
+            <a href="dondehevolado.html" class="btn btn-outline btn-block mt-3">VER MAPA</a>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <!-- CONTACT (ATC CONSOLE STYLE) -->
+    <section id="contacto" class="section-padding atc-section">
+        <div class="container text-center mb-5">
+            <h5 class="text-accent">ATC COMMUNICATION</h5>
+            <h2 class="text-white">CONTACTAME</h2>
+        </div>
+
+        <div class="container contact-grid">
+            <!-- LEFT: FORM (ATC CONSOLE) -->
+            <div class="console-interface">
+                <div class="console-screen">
+                    <div class="console-header">
+                        <span>FREQ: 121.500 MHz</span>
+                        <span>STATUS: MONITORING</span>
+                    </div>
+
+                    <form id="contact-form">
+                        <div class="cmd-input-group d-flex align-items-center">
+                            <span class="cmd-prompt">PILOT_NAME></span>
+                            <input type="text" class="console-input" placeholder="INGRESE NOMBRE" required>
+                        </div>
+
+                        <div class="cmd-input-group d-flex align-items-center">
+                            <span class="cmd-prompt">CONTACT_FREQ></span>
+                            <input type="email" class="console-input" placeholder="INGRESE CORREO" required>
+                        </div>
+
+                        <div class="cmd-input-group d-flex align-items-center">
+                            <span class="cmd-prompt">FLIGHT_TYPE></span>
+                            <select class="console-input" style="color: var(--text-dim);">
+                                <option>SOLICITUD GENERAL</option>
+                                <option>VUELO PRIVADO</option>
+                                <option>INSTRUCCIÓN</option>
+                            </select>
+                        </div>
+
+                        <div class="cmd-input-group">
+                            <span class="cmd-prompt d-block mb-2">MSG_PAYLOAD></span>
+                            <textarea rows="4" class="console-input" placeholder="MENSAJE..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-transmit">
+                            <i class="fas fa-satellite-dish"></i> TRANSMITIR MENSAJE
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- RIGHT: BRIEFING PANEL (NEW) -->
+            <div class="briefing-panel">
+                <div class="briefing-inner">
+                    <div class="briefing-visual"></div>
+                    <div class="briefing-content">
+                        <h3 class="briefing-title">CHARLA DE VUELO</h3>
+                        <p class="briefing-desc">Agenda una sesión directa para planificar tu próxima misión o
+                            instrucción.</p>
+                        <a href="https://calendar.google.com/" target="_blank" class="btn-briefing">
+                            <i class="fas fa-calendar-check"></i> RESERVAR AHORA
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container text-center">
+            <p>&copy; 2026 Luis Zeledon. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+            <div class="mt-3">
+                <a href="privacidad.html" class="text-dim"
+                    style="font-size: 0.8rem; text-decoration: underline;">Política de Privacidad</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <!-- Tawk.to -->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/69633d7c987b03197cb20051/1jelqgcbd';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+
+    <script src="js/main.js"></script>
+    <!-- DEVELOPER BADGE -->
+    <a href="#" class="dev-badge">
+        <img src="img/logo.png" alt="NextWeb CR">
+        <span>Desarrollado por <strong>NextWeb CR</strong></span>
+    </a>
+
+</body>
+
+</html>

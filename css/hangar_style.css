@@ -1,0 +1,220 @@
+/* --- SERVICE PAGE: HANGAR PROTOCOL REDESIGN --- */
+
+.mission-ops-container {
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.mission-section {
+    position: relative;
+    min-height: 85vh;
+    /* Immersive height */
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 229, 255, 0.1);
+    overflow: hidden;
+}
+
+/* BACKGROUND LAYERS */
+.mission-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    transition: transform 0.8s ease-out;
+}
+
+.mission-section:hover .mission-bg {
+    transform: scale(1.05);
+    /* Cinematic Zoom */
+}
+
+.mission-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #02060b 0%, rgba(2, 6, 11, 0.8) 50%, rgba(2, 6, 11, 0.4) 100%);
+    z-index: 1;
+}
+
+/* Alternate Layout (Right Aligned) */
+.mission-section.alt .mission-overlay {
+    background: linear-gradient(-90deg, #02060b 0%, rgba(2, 6, 11, 0.8) 50%, rgba(2, 6, 11, 0.4) 100%);
+}
+
+/* CONTENT PANELS */
+.mission-content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+}
+
+.mission-section.alt .mission-content {
+    justify-content: flex-end;
+}
+
+.mission-panel {
+    width: 600px;
+    /* Desktop width */
+    max-width: 100%;
+    background: rgba(5, 16, 32, 0.7);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 4px solid var(--accent-primary);
+    padding: 3rem;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    position: relative;
+    transition: 0.3s;
+}
+
+.mission-section:hover .mission-panel {
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 30px rgba(0, 229, 255, 0.1);
+}
+
+/* HUD DATA DECORATIONS */
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+    padding-bottom: 1rem;
+}
+
+.mission-code {
+    font-family: var(--font-tech);
+    color: var(--accent-primary);
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+}
+
+.mission-status {
+    font-family: monospace;
+    color: #25D366;
+    /* Success Green */
+    font-size: 0.8rem;
+    background: rgba(37, 211, 102, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+/* CONTENT TEXT */
+.mission-title {
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.mission-desc {
+    color: var(--text-dim);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+/* TECH DETAILS GRID */
+.mission-specs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.spec-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.spec-label {
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    font-family: monospace;
+}
+
+.spec-value {
+    color: var(--accent-primary);
+    font-family: var(--font-tech);
+}
+
+/* BUTTONS */
+.btn-mission {
+    background: var(--accent-primary);
+    color: #000;
+    font-family: var(--font-tech);
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+    font-weight: bold;
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+    transition: 0.3s;
+}
+
+.btn-mission:hover {
+    background: var(--white);
+    box-shadow: 0 0 20px var(--accent-primary);
+}
+
+/* MOBILE RESPONSIVENESS (STRICT) */
+@media (max-width: 900px) {
+    .mission-section {
+        min-height: auto;
+        padding: 4rem 0;
+        border-bottom: 1px solid var(--accent-primary);
+    }
+
+    .mission-content {
+        justify-content: center !important;
+        /* Always center on mobile */
+        padding: 1rem;
+    }
+
+    .mission-panel {
+        width: 100%;
+        padding: 2rem;
+        background: rgba(5, 16, 32, 0.9);
+        /* More opacity for mobile readability */
+        backdrop-filter: none;
+        /* Perf optimization */
+    }
+
+    .mission-title {
+        font-size: 1.8rem;
+    }
+
+    .services-header-bg {
+        height: 40vh;
+    }
+}
+
+/* Page Header Override */
+.services-header-bg {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-image: url('../img/hero/hero2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.services-header-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 3rem;
+    border: 1px solid var(--accent-primary);
+    backdrop-filter: blur(10px);
+}

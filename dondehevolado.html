@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donde He Volado | Luis Zeledon</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .page-header {
+            background-image: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.9)), url('img/hero/hero3.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+
+        /* Location Cards Specifics */
+        .location-card {
+            background: rgba(17, 34, 64, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 3rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .location-header {
+            position: relative;
+            height: 250px;
+        }
+
+        .location-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .location-title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(transparent, rgba(10, 25, 47, 0.9));
+            padding: 1.5rem;
+        }
+
+        .location-body {
+            padding: 2rem;
+        }
+
+        .maps-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .map-wrapper {
+            position: relative;
+            aspect-ratio: 16/9;
+            width: 100%;
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+
+        .address-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1rem;
+            border-left: 3px solid var(--accent-gold);
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .maps-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <a href="index.html"><span class="text-accent">LUIS</span> ZELEDON <i
+                        class="fas fa-plane-departure text-accent"></i></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Volver a Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="#contacto" class="btn-nav">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER (Tactical Banner) -->
+    <header class="page-header">
+        <div class="overlay"></div>
+        <div class="container text-left">
+            <h5 class="text-accent mb-2">FLIGHT LOG DATA</h5>
+            <h1 class="text-white display-4" style="font-family: var(--font-tech);">BITÁCORA DE VUELO</h1>
+            <div style="height: 2px; width: 50px; background: var(--accent-primary); margin: 20px 0;"></div>
+            <p>Registro de operaciones y destinos frecuentes.</p>
+        </div>
+    </header>
+
+    <section class="section-padding ops-container">
+        <div class="container">
+
+            <!-- SECTOR 01: LIBERIA -->
+            <div class="ops-sector" id="sector-liberia">
+                <div class="sector-layout">
+                    <!-- LEFT INFO -->
+                    <div class="sector-info">
+                        <div class="sector-header">
+                            <span class="sector-code">SECTOR: LIR-001</span>
+                            <h2 class="sector-title">LIBERIA</h2>
+                            <div class="sector-coords">10.636270 N, -85.430546 W</div>
+                        </div>
+                        <p class="sector-details">
+                            Destino clave en la región de Guanacaste. Punto estratégico para operaciones turísticas y
+                            traslados ejecutivos a la costa del Pacífico.
+                        </p>
+                        <div class="address-data">
+                            <i class="fas fa-satellite-dish text-accent"></i> 200m Este Banco Central, Liberia.
+                        </div>
+                    </div>
+
+                    <!-- RIGHT NAV MODULE -->
+                    <div class="nav-module">
+                        <!-- TABS -->
+                        <div class="nav-controls">
+                            <button class="nav-tab active" onclick="switchMap('liberia', 'google')">
+                                <i class="fab fa-google"></i> SAT-VIEW
+                            </button>
+                            <button class="nav-tab" onclick="switchMap('liberia', 'waze')">
+                                <i class="fab fa-waze"></i> TRAFFIC-NAV
+                            </button>
+                        </div>
+
+                        <!-- MAP VIEWPORT -->
+                        <div class="map-viewport">
+                            <!-- FACADE OVERLAY -->
+                            <div class="map-facade" id="facade-liberia"
+                                style="background-image: url('img/aeropuertos/aeropuertodoqcr.jpg');">
+                                <button class="btn-init-link" onclick="initSector('liberia')">
+                                    <i class="fas fa-wifi"></i> INITIATE LINK
+                                </button>
+                            </div>
+
+                            <!-- IFRAME GOOGLE -->
+                            <div class="map-container active" id="map-liberia-google">
+                                <iframe
+                                    data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60617.60704605025!2d-85.51711382490151!3d10.629533388934833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f757d2a8a1c08e5%3A0xb2f8a494fb368393!2sProvincia%20de%20Guanacaste%2C%20Liberia!5e1!3m2!1ses-419!2scr!4v1769628204690!5m2!1ses-419!2scr"
+                                    loading="lazy"></iframe>
+                            </div>
+
+                            <!-- IFRAME WAZE -->
+                            <div class="map-container" id="map-liberia-waze">
+                                <iframe
+                                    data-src="https://embed.waze.com/iframe?zoom=16&lat=10.636270&lon=-85.430546&ct=livemap&pin=1"></iframe>
+                            </div>
+                        </div>
+
+                        <!-- DEEP LINKS -->
+                        <div class="deep-links-bar">
+                            <span class="dl-label">DIRECT LINK PROTOCOL >></span>
+                            <div style="display:flex; gap:10px;">
+                                <a href="https://www.google.com/maps/dir/?api=1&destination=10.636270,-85.430546"
+                                    target="_blank" class="dl-btn google"><i class="fab fa-google"></i> MAPS APP</a>
+                                <a href="waze://?ll=10.636270,-85.430546&navigate=yes" class="dl-btn waze"><i
+                                        class="fab fa-waze"></i> WAZE APP</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTOR 02: CARTAGO -->
+            <div class="ops-sector" id="sector-cartago">
+                <div class="sector-layout">
+                    <div class="sector-info">
+                        <div class="sector-header">
+                            <span class="sector-code">SECTOR: CAR-002</span>
+                            <h2 class="sector-title">CARTAGO</h2>
+                            <div class="sector-coords">9.864166 N, -83.921642 W</div>
+                        </div>
+                        <p class="sector-details">
+                            Antigua metrópoli. Operaciones de altura y precisión en el Valle del Guarco.
+                        </p>
+                        <div class="address-data">
+                            <i class="fas fa-satellite-dish text-accent"></i> 400m Norte Restaurante Food.
+                        </div>
+                    </div>
+                    <div class="nav-module">
+                        <div class="nav-controls">
+                            <button class="nav-tab active" onclick="switchMap('cartago', 'google')"><i
+                                    class="fab fa-google"></i> SAT-VIEW</button>
+                            <button class="nav-tab" onclick="switchMap('cartago', 'waze')"><i class="fab fa-waze"></i>
+                                TRAFFIC-NAV</button>
+                        </div>
+                        <div class="map-viewport">
+                            <div class="map-facade" id="facade-cartago"
+                                style="background-image: url('img/aeropuertos/aeropuertodallas.jpg');">
+                                <button class="btn-init-link" onclick="initSector('cartago')"><i
+                                        class="fas fa-wifi"></i> INITIATE LINK</button>
+                            </div>
+                            <div class="map-container active" id="map-cartago-google">
+                                <iframe
+                                    data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60766.0012329061!2d-83.96638927949621!3d9.854204852301624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0df1021af2921%3A0xb5e5548558a39c52!2sProvincia%20de%20Cartago%2C%20Cartago!5e1!3m2!1ses-419!2scr!4v1769628282027!5m2!1ses-419!2scr"
+                                    loading="lazy"></iframe>
+                            </div>
+                            <div class="map-container" id="map-cartago-waze">
+                                <iframe
+                                    data-src="https://embed.waze.com/iframe?zoom=13&lat=9.864166&lon=-83.921642&ct=livemap&pin=1"></iframe>
+                            </div>
+                        </div>
+                        <div class="deep-links-bar">
+                            <span class="dl-label">DIRECT LINK PROTOCOL >></span>
+                            <div style="display:flex; gap:10px;">
+                                <a href="https://www.google.com/maps/dir/?api=1&destination=9.864166,-83.921642"
+                                    target="_blank" class="dl-btn google"><i class="fab fa-google"></i> MAPS APP</a>
+                                <a href="waze://?ll=9.864166,-83.921642&navigate=yes" class="dl-btn waze"><i
+                                        class="fab fa-waze"></i> WAZE APP</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTOR 03: PUNTARENAS -->
+            <div class="ops-sector" id="sector-puntarenas">
+                <div class="sector-layout">
+                    <div class="sector-info">
+                        <div class="sector-header">
+                            <span class="sector-code">SECTOR: PUN-003</span>
+                            <h2 class="sector-title">PUNTARENAS</h2>
+                            <div class="sector-coords">9.979155 N, -84.829731 W</div>
+                        </div>
+                        <p class="sector-details">
+                            La Perla del Pacífico. Logística portuaria y turismo costero.
+                        </p>
+                        <div class="address-data">
+                            <i class="fas fa-satellite-dish text-accent"></i> 100m Este McDonalds.
+                        </div>
+                    </div>
+                    <div class="nav-module">
+                        <div class="nav-controls">
+                            <button class="nav-tab active" onclick="switchMap('puntarenas', 'google')"><i
+                                    class="fab fa-google"></i> SAT-VIEW</button>
+                            <button class="nav-tab" onclick="switchMap('puntarenas', 'waze')"><i
+                                    class="fab fa-waze"></i> TRAFFIC-NAV</button>
+                        </div>
+                        <div class="map-viewport">
+                            <div class="map-facade" id="facade-puntarenas"
+                                style="background-image: url('img/aeropuertos/aeropuertojscr.jpg');">
+                                <button class="btn-init-link" onclick="initSector('puntarenas')"><i
+                                        class="fas fa-wifi"></i> INITIATE LINK</button>
+                            </div>
+                            <div class="map-container active" id="map-puntarenas-google">
+                                <iframe
+                                    data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30371.47531201622!2d-84.84282060196878!3d9.978550118033002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa02eb96dada6b7%3A0x3f48bd110f83d5ec!2sProvincia%20de%20Puntarenas%2C%20Puntarenas!5e1!3m2!1ses-419!2scr!4v1769628403476!5m2!1ses-419!2scr"
+                                    loading="lazy"></iframe>
+                            </div>
+                            <div class="map-container" id="map-puntarenas-waze">
+                                <iframe
+                                    data-src="https://embed.waze.com/iframe?zoom=14&lat=9.979155&lon=-84.829731&ct=livemap&pin=1"></iframe>
+                            </div>
+                        </div>
+                        <div class="deep-links-bar">
+                            <span class="dl-label">DIRECT LINK PROTOCOL >></span>
+                            <div style="display:flex; gap:10px;">
+                                <a href="https://www.google.com/maps/dir/?api=1&destination=9.979155,-84.829731"
+                                    target="_blank" class="dl-btn google"><i class="fab fa-google"></i> MAPS APP</a>
+                                <a href="waze://?ll=9.979155,-84.829731&navigate=yes" class="dl-btn waze"><i
+                                        class="fab fa-waze"></i> WAZE APP</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTOR 04: TAMARINDO -->
+            <div class="ops-sector" id="sector-tamarindo">
+                <div class="sector-layout">
+                    <div class="sector-info">
+                        <div class="sector-header">
+                            <span class="sector-code">SECTOR: TAMA-004</span>
+                            <h2 class="sector-title">TAMARINDO</h2>
+                            <div class="sector-coords">10.297856 N, -85.841417 W</div>
+                        </div>
+                        <p class="sector-details">
+                            Surf City. Conexión vital para el turismo internacional y deportes acuáticos.
+                        </p>
+                        <div class="address-data">
+                            <i class="fas fa-satellite-dish text-accent"></i> 50m Sur Taco Bell.
+                        </div>
+                    </div>
+                    <div class="nav-module">
+                        <div class="nav-controls">
+                            <button class="nav-tab active" onclick="switchMap('tamarindo', 'google')"><i
+                                    class="fab fa-google"></i> SAT-VIEW</button>
+                            <button class="nav-tab" onclick="switchMap('tamarindo', 'waze')"><i class="fab fa-waze"></i>
+                                TRAFFIC-NAV</button>
+                        </div>
+                        <div class="map-viewport">
+                            <div class="map-facade" id="facade-tamarindo"
+                                style="background-image: url('img/aeropuertos/aeropuertochicago.jpg');">
+                                <button class="btn-init-link" onclick="initSector('tamarindo')"><i
+                                        class="fas fa-wifi"></i> INITIATE LINK</button>
+                            </div>
+                            <div class="map-container active" id="map-tamarindo-google">
+                                <iframe
+                                    data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15170.466267769609!2d-85.84836965417702!3d10.3008884371251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9e39409203c30f%3A0xbb189f5e2cc1f893!2sProvincia%20de%20Guanacaste%2C%20Tamarindo!5e1!3m2!1ses-419!2scr!4v1769628482557!5m2!1ses-419!2scr"
+                                    loading="lazy"></iframe>
+                            </div>
+                            <div class="map-container" id="map-tamarindo-waze">
+                                <iframe
+                                    data-src="https://embed.waze.com/iframe?zoom=15&lat=10.297856&lon=-85.841417&ct=livemap&pin=1"></iframe>
+                            </div>
+                        </div>
+                        <div class="deep-links-bar">
+                            <span class="dl-label">DIRECT LINK PROTOCOL >></span>
+                            <div style="display:flex; gap:10px;">
+                                <a href="https://www.google.com/maps/dir/?api=1&destination=10.297856,-85.841417"
+                                    target="_blank" class="dl-btn google"><i class="fab fa-google"></i> MAPS APP</a>
+                                <a href="waze://?ll=10.297856,-85.841417&navigate=yes" class="dl-btn waze"><i
+                                        class="fab fa-waze"></i> WAZE APP</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container text-center">
+            <p>&copy; 2026 Luis Zeledon. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+            <div class="mt-3">
+                <a href="privacidad.html" class="text-dim"
+                    style="font-size: 0.8rem; text-decoration: underline;">Política de Privacidad</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING ACTIONS -->
+    <div class="floating-actions">
+        <a href="https://wa.me/50688888888" target="_blank" class="float-btn whatsapp" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+50688888888" class="float-btn phone" aria-label="Llamar">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- Tawk.to -->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/69633d7c987b03197cb20051/1jelqgcbd';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+
+    <script src="js/main.js"></script>
+
+    <!-- OPS CENTER LOGIC -->
+    <script>
+        function switchMap(sectorId, type) {
+            // Update Tabs
+            const sector = document.getElementById('sector-' + sectorId);
+            const tabs = sector.querySelectorAll('.nav-tab');
+            tabs.forEach(t => t.classList.remove('active'));
+            event.currentTarget.classList.add('active'); // Assumes button click
+
+            // Update Containers
+            const containers = sector.querySelectorAll('.map-container');
+            containers.forEach(c => c.classList.remove('active'));
+
+            const target = document.getElementById('map-' + sectorId + '-' + type);
+            if (target) target.classList.add('active');
+
+            // Check if iframe has source, if not load it (lazy load for tabs)
+            const iframe = target.querySelector('iframe');
+            if (iframe && !iframe.src && iframe.dataset.src) {
+                iframe.src = iframe.dataset.src;
+            }
+        }
+
+        function initSector(sectorId) {
+            // Fade out facade
+            const facade = document.getElementById('facade-' + sectorId);
+            facade.style.opacity = '0';
+            setTimeout(() => facade.style.display = 'none', 500);
+
+            // Load Default Map (Google)
+            const googleContainer = document.getElementById('map-' + sectorId + '-google');
+            const googleFrame = googleContainer.querySelector('iframe');
+            if (googleFrame && googleFrame.dataset.src) {
+                googleFrame.src = googleFrame.dataset.src;
+            }
+
+            // Preload Waze too? Or wait for tab? Let's wait for tab for performance.
+        }
+    </script>
+    <!-- DEVELOPER BADGE -->
+    <a href="#" class="dev-badge">
+        <img src="img/logo.png" alt="NextWeb CR">
+        <span>Desarrollado por <strong>NextWeb CR</strong></span>
+    </a>
+
+</body>
+
+</html>

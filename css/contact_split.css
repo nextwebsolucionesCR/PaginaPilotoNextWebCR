@@ -1,0 +1,119 @@
+/* --- CONTACT SECTION SPLIT LAYOUT --- */
+
+/* Wrapper for the Grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    /* Form gets more space */
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+/* Modifying existing Console to fit in grid */
+.console-interface {
+    margin: 0;
+    /* Reset margin auto */
+    width: 100%;
+    max-width: 100%;
+}
+
+/* RIGHT COLUMN: BRIEFING PANEL */
+.briefing-panel {
+    background: rgba(5, 16, 32, 0.6);
+    border: 1px solid var(--text-dim);
+    padding: 5px;
+    /* Outer frame */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.briefing-inner {
+    background: rgba(10, 20, 30, 0.8);
+    border: 1px solid rgba(0, 229, 255, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.briefing-visual {
+    flex: 1;
+    /* Takes available space */
+    min-height: 250px;
+    background-image: url('../img/contacto/pilotoCharla.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-bottom: 1px solid var(--accent-primary);
+}
+
+.briefing-visual::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 60%, rgba(5, 16, 32, 0.9) 100%);
+}
+
+.briefing-content {
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.briefing-title {
+    font-family: var(--font-tech);
+    color: var(--accent-primary);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.briefing-desc {
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.btn-briefing {
+    background: var(--accent-primary);
+    color: #000;
+    padding: 1rem 2rem;
+    font-family: var(--font-tech);
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border: 1px solid var(--accent-primary);
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: uppercase;
+}
+
+.btn-briefing:hover {
+    background: transparent;
+    color: var(--accent-primary);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
+}
+
+/* MOBILE RESPONSIVE (Strict Rules) */
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        /* Vertical Stack */
+        gap: 2rem;
+    }
+
+    .briefing-panel {
+        order: -1;
+        /* Option: Show booking first on mobile? Or keep standard order. Let's keep standard. */
+    }
+}
